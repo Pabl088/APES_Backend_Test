@@ -3,7 +3,8 @@
 1. **Describe something new that you have learned last month?**  
 Over the past month, I’ve gained a lot of valuable knowledge about using AWS services, specifically EC2, Lambda, and S3. I had the opportunity to deploy and update a website and scripts using these services. This experience has significantly enhanced my understanding of how to implement these tools effectively.
 
-2. **Name some characteristics of Python and NodeJS?**  
+2. **Name some characteristics of Python and NodeJS?**
+
 **Python:**
 - Object-oriented
 - Easy to learn
@@ -42,4 +43,24 @@ REST web services can handle lots of users and data, and they work well with dif
 With REST, you have to ask different “endpoints” for different pieces of data. Sometimes this means you get too much data, or not enough.
 GraphQL lets you ask for exactly what you need all at once. This can make your app faster and use less data. It’s easier to add new features without breaking old ones.
 
+10. **SQL Case: A retail company maintains the data of its customers in the CUSTOMER table. Write a query to print the IDs and the NAMEs of the customers, sorted by CUSTOMER.NAME in descending order.**
+
+Input Sample:
+
+| ID | NAME | COUNTRY | CREDITS |
+| --- | --- | --- | --- |
+| 1 | Frances White | USA | 200350 |
+| 2 | Carolyn Bradley | UK | 15354 |
+| 3 | Annie Fernandez | France | 359200 |
+| 4 | Ruth Hanson | Albania | 1060 |
+| 5 | Paula Fuller | USA | 14789 |
+| 6 | Bonnie Johnston | China | 100243 |
+| 7 | Ruth Gutierrez | USA | 998999 |
+| 8 | Ernest Thomas | Canada | 500500 |
+| 9 | Joe Garza | UK | 18782 |
+| 10 | Anne Harris | USA | 158367 |
+
+Query: `SELECT ID, NAME FROM CUSTOMER ORDER BY NAME DESC;`
+
+The item 11 is resolved in the file case11.js
 
