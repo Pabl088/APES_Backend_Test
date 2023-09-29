@@ -24,6 +24,11 @@ async function updateOrder(sku_code, order_number) {
             'SELECT * FROM product_orders_lines WHERE sku_code = $1 AND order_id = (SELECT id FROM production_orders WHERE order_number = $2)',
             [sku_code, order_number]
         );
+
+        if (POLResult.rowCount === 0) {
+            throw new Error('Product order line not found');
+        }
+
         const POL = POLResult.rows[0];
 
         // Update the product order line
