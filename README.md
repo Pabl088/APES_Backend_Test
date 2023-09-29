@@ -60,7 +60,56 @@ Input Sample:
 | 9 | Joe Garza | UK | 18782 |
 | 10 | Anne Harris | USA | 158367 |
 
-Query: `SELECT ID, NAME FROM CUSTOMER ORDER BY NAME DESC;`
+# Sample Output:
 
-The item 11 is resolved in the file case11.js
+| ID | NAME |
+|----|------|
+| 4  | Ruth Hanson |
+| 7  | Ruth Gutierrez |
+| 5  | Paula Fuller |
+| 9  | Joe Garza |
+| 1  | Frances White |
+| 8  | Ernest Thomas |
+| 2  | Carolyn Bradley |
+| 6  | Bonnie Johnston |
+| 3  | Annie Fernandez |
+| 10 | Anne Harris |
+
+Query: `SELECT ID, NAME FROM CUSTOMER ORDER BY NAME DESC`
+
+## Solve the following case:
+
+Case:
+
+**Techno Apes needs you to create a Python/NodeJS Script to resolve the following problem: The APES Platform has a module to manage the Production Orders (PO), these orders are composed of Product Order Lines. **
+
+A Production Order have the following data:
+
+| id | order_number | location_name | status   | total_amount | total_validated |
+|----|--------------|---------------|----------|--------------|-----------------|
+| 10 | PO-3491      | Warehouse Demo| created  |     20       |        0        |
+
+A Line have the following data:
+
+| sku_code | name                | amount | amount_validated | order_id | status   |
+|----------|---------------------|--------|------------------|----------|----------|
+| SH8979   | Bolso Negro Jaguar  |   2    |        0         |    10    | created  |
+| WH78978  | Zapato Sport Blanco |   3    |        0         |    10    | created  |
+
+You have to create a Script where the input is a Sku Code and Order Number, the output would be the Order and the Order Lines updated with the amount validated data and the new status, for example: Input: sku_code: SH8979, order_number: PO-3491 Output:
+
+| id | order_number | location_name | status      | total_amount | total_validated |
+|----|--------------|---------------|-------------|--------------|-----------------|
+| 10 | PO-3491      | Warehouse Demo| incomplete  |     20       |        1        |
+
+| sku_code | name                | amount | amount_validated | order_id | status      |
+|----------|---------------------|--------|------------------|----------|-------------|
+| SH8979   | Bolso Negro Jaguar  |   2    |        1         |    10    | incomplete  |
+| WH78978  | Zapato Sport Blanco |   3    |        0         |    10    | created     |
+
+Conditions: If amount_validated is equal to cero, status is created.
+If amount_validated is >0 and < amount, status is incomplete.
+If amount_validated is == amount, status is complete.
+
+## THIS ITEM IS RESOLVED IN THE FILE item11.js
 
