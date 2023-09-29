@@ -60,7 +60,7 @@ Input Sample:
 | 9 | Joe Garza | UK | 18782 |
 | 10 | Anne Harris | USA | 158367 |
 
-# Sample Output:
+Sample Output:
 
 | ID | NAME |
 |----|------|
@@ -77,11 +77,11 @@ Input Sample:
 
 Query: `SELECT ID, NAME FROM CUSTOMER ORDER BY NAME DESC`
 
-## Solve the following case:
+11. **Solve the following case:**
 
 Case:
 
-**Techno Apes needs you to create a Python/NodeJS Script to resolve the following problem: The APES Platform has a module to manage the Production Orders (PO), these orders are composed of Product Order Lines. **
+Techno Apes needs you to create a Python/NodeJS Script to resolve the following problem: The APES Platform has a module to manage the Production Orders (PO), these orders are composed of Product Order Lines.
 
 A Production Order have the following data:
 
@@ -111,5 +111,5 @@ Conditions: If amount_validated is equal to cero, status is created.
 If amount_validated is >0 and < amount, status is incomplete.
 If amount_validated is == amount, status is complete.
 
-## THIS ITEM IS RESOLVED IN THE FILE item11.js
+## THIS ITEM IS RESOLVED IN THE FILE  [item11.js](./item11.js)
 
